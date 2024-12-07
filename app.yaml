@@ -1,0 +1,10 @@
+runtime: python39
+
+handlers:
+  # This configures Google App Engine to serve the files in the website/static directory.
+  - url: /static
+    static_dir: website/static
+
+    # This handler routes all requests not caught above to your main app.
+  - url: /.*
+    script: auto
